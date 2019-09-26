@@ -1,0 +1,34 @@
+<configuration>
+
+    <!-- for lopgback you chouls add logback-classic jar ans as usual slf4j-api -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder
+            by default -->
+        <encoder>
+            <pattern>%-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+    <!-- <logger level="DEBUG" -->
+    <!-- name="org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer"> -->
+    <!-- <appender-ref ref="STDOUT" /> -->
+    <!-- </logger> -->
+
+    <logger level="DEBUG" name="bpp">
+    </logger>
+
+    <logger level="DEBUG" name="config">
+    </logger>
+
+    <!-- Hibernate and JPA Logger -->
+    <logger level="INFO" name="org.hibernate"/>
+    <logger level="DEBUG" name="org.hibernate.jpa.internal.util.LogHelper"/>
+    <logger level="DEBUG" name="org.hibernate.cfg.SettingsFactory"/>
+    <logger level="TRACE" name="org.hibernate.type.descriptor.sql.BasicBinder"/>
+    <logger level="DEBUG" name="org.hibernate.SQL"/>
+
+</configuration>
